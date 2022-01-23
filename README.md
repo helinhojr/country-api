@@ -14,6 +14,19 @@ Username: admin
 Password: secret
 
 Credenciais usadas para gerar o token de acesso 
+Rota para gerar o token: 
+Method: POST
+Rota: api/v1/auth
+Body: 
+    {
+        "username":"admin",
+        "password":"secret"
+    }
+
+Para cada request deve ser enviado o token no cabeçalho com
+Authorization: [token gerado na request anterior]
+
+Usando o swagger, basta apenas colocar o token no campo authorize apresentado pela interface do swagger.
 
 Foi usado o `flyway db` é uma ferramenta que se permite garantir a ordem e organização para os scripts SQL que são executados na base de dados, garantindo o controle de versão dos mesmos.
 

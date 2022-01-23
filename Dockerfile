@@ -11,5 +11,5 @@ RUN mvn clean install -DskipTests
 # FROM openjdk:13-jre-alpine
 FROM openjdk:16-alpine3.13
 EXPOSE 8080
-COPY --from=maven target/exchange-api-0.0.1-SNAPSHOT.jar ./
+COPY --from=maven target/country-api-0.0.1-SNAPSHOT.jar ./
 CMD ["java", "-jar","./country-api-0.0.1-SNAPSHOT.jar"]
